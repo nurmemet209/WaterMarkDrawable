@@ -1,4 +1,4 @@
-package com.cn.nurmemet;
+package com.cn.watermark;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

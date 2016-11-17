@@ -1,4 +1,4 @@
-package com.cn.nurmemet;
+package com.cn.watermark;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.cn.nurmemet;
+package com.cn.watermark;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
@@ -9,7 +9,6 @@ import android.graphics.PixelFormat;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.ShapeDrawable;
 
 /**
  * Created by nurmemet on 2016/11/16.
