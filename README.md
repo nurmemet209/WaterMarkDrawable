@@ -2,7 +2,7 @@
 仿钉钉聊天背景添加水印效果防止被截屏
 
 下面是效果图  
-![](secreenshot/water_mark.png)  
+![](screenshot/water_mark.png)  
 使用方法项目根build.gradle中  
 ```groovy
 allprojects {
