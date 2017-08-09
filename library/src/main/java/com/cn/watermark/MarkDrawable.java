@@ -14,7 +14,7 @@ import android.text.TextPaint;
 
 public class MarkDrawable extends Drawable {
     private TextPaint mPaint;
-    private int mTextColor= 0xFFdbdbdb;
+    private int mTextColor= 0xFFf8e1e2;
     private RectF mBoundRect;
     private String mMarkStr;
     private static final int inset = 80;
