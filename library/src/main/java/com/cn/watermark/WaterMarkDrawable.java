@@ -35,11 +35,54 @@ public class WaterMarkDrawable extends Drawable {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setShader(mShader);
-
-
-
-
     }
+
+    public WaterMarkDrawable(String markStr,int textColor) {
+        this.mMarkDrawable = new MarkDrawable(markStr,textColor);
+        mBoundRect = new RectF();
+        final int width=mMarkDrawable.getIntrinsicWidth();
+        final  int height=mMarkDrawable.getIntrinsicHeight();
+        Bitmap bmp = Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bmp);
+        mMarkDrawable.setBounds(0,0,width,height);
+        mMarkDrawable.draw(canvas);
+        mShader = new BitmapShader(bmp, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setShader(mShader);
+    }
+
+    public WaterMarkDrawable(String markStr,int textColor,int backgroundColor) {
+        this.mMarkDrawable = new MarkDrawable(markStr,textColor,backgroundColor);
+        mBoundRect = new RectF();
+        final int width=mMarkDrawable.getIntrinsicWidth();
+        final  int height=mMarkDrawable.getIntrinsicHeight();
+        Bitmap bmp = Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bmp);
+        mMarkDrawable.setBounds(0,0,width,height);
+        mMarkDrawable.draw(canvas);
+        mShader = new BitmapShader(bmp, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setShader(mShader);
+    }
+
+    public WaterMarkDrawable(String markStr,int textColor,int textSize,int backgroundColor) {
+        this.mMarkDrawable = new MarkDrawable(markStr,textColor,textSize,backgroundColor);
+        mBoundRect = new RectF();
+        final int width=mMarkDrawable.getIntrinsicWidth();
+        final  int height=mMarkDrawable.getIntrinsicHeight();
+        Bitmap bmp = Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bmp);
+        mMarkDrawable.setBounds(0,0,width,height);
+        mMarkDrawable.draw(canvas);
+        mShader = new BitmapShader(bmp, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setShader(mShader);
+    }
+
+
 
 
     @Override

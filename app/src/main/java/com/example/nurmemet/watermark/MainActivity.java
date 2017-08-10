@@ -1,5 +1,6 @@
 package com.example.nurmemet.watermark;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewGroup;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mContainer= (ViewGroup) findViewById(R.id.activity_main);
-        WaterMarkDrawable drawable=new WaterMarkDrawable("nurmemet9079");
+        WaterMarkDrawable drawable=new WaterMarkDrawable("nurmemet9079",getResources().getColor(R.color.textgreen),30,getResources().getColor(R.color.text));
         mContainer.setBackground(drawable);
 
     }
