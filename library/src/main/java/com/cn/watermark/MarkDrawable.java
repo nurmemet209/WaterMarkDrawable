@@ -15,6 +15,7 @@ import android.text.TextPaint;
 public class MarkDrawable extends Drawable {
     private TextPaint mPaint;
     private int mTextColor= 0xFFf8e1e2;
+    private int mBackgroundColor= 0xffffff;
     private RectF mBoundRect;
     private String mMarkStr;
     private static final int inset = 80;
@@ -25,6 +26,29 @@ public class MarkDrawable extends Drawable {
         this.mMarkStr = mMarkStr;
         init();
     }
+
+    public MarkDrawable(String mMarkStr,int textColor) {
+        this.mMarkStr = mMarkStr;
+        this.mTextColor=textColor;
+        init();
+    }
+
+
+    public MarkDrawable(String mMarkStr,int textColor,int backgroundColor) {
+        this.mMarkStr = mMarkStr;
+        this.mTextColor=textColor;
+        this.mBackgroundColor=backgroundColor;
+        init();
+    }
+
+    public MarkDrawable(String mMarkStr,int textColor,int textSize,int backgroundColor) {
+        this.mMarkStr = mMarkStr;
+        this.mTextColor=textColor;
+        this.mTextSize=textSize;
+        this.mBackgroundColor=backgroundColor;
+        init();
+    }
+
 
     private void init(){
         mPaint=new TextPaint();
@@ -41,6 +65,7 @@ public class MarkDrawable extends Drawable {
     @Override
     public void draw(Canvas canvas) {
         canvas.save();
+        canvas.drawColor(mBackgroundColor);
         canvas.translate(mBoundRect.width()/2,mBoundRect.height()/2);
         canvas.rotate(-mDegree);
         canvas.drawText(mMarkStr,inset/2-mBoundRect.width()/2,0,mPaint);
